@@ -4,13 +4,4 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.Asleep)
 })
-music.playSoundEffect(music.createSoundEffect(
-WaveShape.Sine,
-5000,
-0,
-255,
-0,
-500,
-SoundExpressionEffect.None,
-InterpolationCurve.Linear
-), SoundExpressionPlayMode.InBackground)
+music.playMelody("C5 E A D G B E C5 ", 1250)
