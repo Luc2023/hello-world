@@ -32,20 +32,6 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 input.onGesture(Gesture.Shake, function () {
-	
-})
-input.onLogoEvent(TouchButtonEvent.Touched, function () {
-    for (let index = 0; index < 10; index++) {
-        basic.showLeds(`
-            . # # # .
-            # . . . #
-            . . # # .
-            . . . . .
-            . . # . .
-            `)
-    }
-})
-basic.forever(function () {
     basic.showLeds(`
         . # # # .
         # # # # #
@@ -74,4 +60,15 @@ basic.showLeds(`
         # # # # #
         . # # # .
         `,50)
+})
+input.onLogoEvent(TouchButtonEvent.Touched, function () {
+    for (let index = 0; index < 10; index++) {
+        basic.showLeds(`
+            . # # # .
+            # . . . #
+            . . # # .
+            . . . . .
+            . . # . .
+            `)
+    }
 })
