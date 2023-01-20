@@ -22,6 +22,9 @@ input.onButtonPressed(Button.AB, function () {
     basic.showNumber(randint(0, 10))
 })
 input.onButtonPressed(Button.B, function () {
+	
+})
+input.onGesture(Gesture.Shake, function () {
     rps = randint(1, 3)
     if (rps == 1) {
         basic.showString("R")
@@ -30,36 +33,6 @@ input.onButtonPressed(Button.B, function () {
     } else {
         basic.showString("S")
     }
-})
-input.onGesture(Gesture.Shake, function () {
-    basic.showLeds(`
-        . # # # .
-        # # # # #
-        # # # # #
-        # # # # #
-        . # # # .
-        `,50)
-basic.showLeds(`
-        . # # # .
-        # # # # #
-        . . . # #
-        # # # # #
-        . # # # .
-        `,50)
-basic.showLeds(`
-        . # # # .
-        . . . # #
-        . . . # #
-        . . . # #
-        . # # # .
-        `,50)
-basic.showLeds(`
-        . # # # .
-        # # # # #
-        . . . # #
-        # # # # #
-        . # # # .
-        `,50)
 })
 input.onLogoEvent(TouchButtonEvent.Touched, function () {
     for (let index = 0; index < 10; index++) {
