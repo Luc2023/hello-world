@@ -22,16 +22,13 @@ input.onButtonPressed(Button.AB, function () {
     basic.showNumber(randint(0, 10))
 })
 input.onButtonPressed(Button.B, function () {
-    for (let index = 0; index < 10; index++) {
-        basic.showLeds(`
-            . # # # .
-            # . . . #
-            . . # # .
-            . . . . .
-            . . # . .
-            `)
-    }
-    basic.clearScreen()
+    basic.showLeds(`
+        . # # # .
+        # . . . #
+        . . # # .
+        . . . . .
+        . . # . .
+        `)
 })
 input.onGesture(Gesture.Shake, function () {
     rps = randint(1, 3)
