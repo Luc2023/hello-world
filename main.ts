@@ -22,7 +22,16 @@ input.onButtonPressed(Button.AB, function () {
     basic.showNumber(randint(0, 10))
 })
 input.onButtonPressed(Button.B, function () {
-	
+    for (let index = 0; index < 10; index++) {
+        basic.showLeds(`
+            . # # # .
+            # . . . #
+            . . # # .
+            . . . . .
+            . . # . .
+            `)
+    }
+    basic.clearScreen()
 })
 input.onGesture(Gesture.Shake, function () {
     rps = randint(1, 3)
@@ -34,14 +43,15 @@ input.onGesture(Gesture.Shake, function () {
         basic.showString("S")
     }
 })
-input.onLogoEvent(TouchButtonEvent.Touched, function () {
-    for (let index = 0; index < 10; index++) {
+basic.forever(function () {
+    while (input.logoIsPressed()) {
         basic.showLeds(`
-            . # # # .
-            # . . . #
-            . . # # .
-            . . . . .
-            . . # . .
-            `)
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `, 0)
     }
+    basic.clearScreen()
 })
