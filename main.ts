@@ -43,3 +43,15 @@ input.onGesture(Gesture.Shake, function () {
         basic.showString("S")
     }
 })
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    for (let index = 0; index < 10; index++) {
+        basic.showString("A",5)
+basic.showString("B",5)
+    }
+    letter = randint(1, 2)
+    if (letter == 1) {
+        basic.showString("H")
+    } else if (letter == 2) {
+        basic.showString("T")
+    }
+})
